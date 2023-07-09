@@ -1,0 +1,193 @@
+// ++++++++++++++++ Footer +++++++++++++
+.footer {
+    padding-top: 30px;
+    position: relative;
+    color: #fff;
+    background-color: $color-title;
+
+    @include for-size(phone-only) {
+                padding-top: 10px; 
+    }
+
+    &__title {
+        text-align: center;
+
+        h2 {
+            font-size: 2.1em;
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+
+            @include for-size(phone-only) {
+                font-size: 1.4em;
+            }
+        }
+    }
+
+    &__logo {
+        color: $primary;
+        font-size: 1.2em;
+        font-weight: 900;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+    }
+
+    &__row {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 50px;
+
+        @include for-size(phone-only) {
+                flex-direction: column;
+        }
+    }
+
+    &__upperBox {
+        padding-bottom: 70px;
+        position: relative;
+        margin-top: 50px;
+    }
+
+    &__row {
+        justify-content: start;
+    }
+
+    &__col-md-5 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+        height: 100%;
+        margin-right: 45px;
+
+        @include for-size(phone-only) {
+                flex: 0 0 100%;
+                max-width: 100%;	
+        }
+
+        &-img {
+            max-height: 100px;
+            object-fit: cover;
+        }
+
+        p {
+            font-size: 0.9em;
+            line-height: 1.6;
+            margin-top: 10px;
+            @include for-size(phone-only) {
+                font-size: 0.8em;
+            }
+        }
+    }
+
+    &__col-md-8 {
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        @include for-size(phone-only) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10px;
+        flex: 0 0 100%;
+        max-width: 100%;
+            height: 100%;
+            margin-top: 30px;
+        }
+    }
+
+    &__col-md-3 {
+        flex-basis: 22.5%;
+        &:not(:first-child) {
+            margin-left: 20px;
+            @include for-size(phone-only) {
+                margin-left: 0;
+            }
+        }
+    }
+
+    &__social-widget {
+        display: flex;
+        align-items: center;
+        margin: 10px 0 0;
+        a {
+            font-size: 12px;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            float: left;
+            color: #fff;
+            border-radius: 2px;
+            background-color: $primary;
+            font-size: 14px;
+            text-align: center;
+            margin-right: 6px;
+        }
+    }
+
+    &__widget-links {
+        padding-left: 0;
+
+        h3 {
+            font-size: 0.9em;
+            font-family: $heading-font;
+            letter-spacing: -0.03em;
+            padding-bottom: 10px;
+        }
+        a {
+            font-size: 11px;
+            transition: all 0.5s ease-in-out;
+            &:hover {
+                color: $primary;
+            }
+        }
+
+        li {
+            display: block;
+            text-align: left;
+            margin-top: 0px !important;
+            padding-left: 20px;
+            position: relative;
+            &::before {
+                content: "⊚";
+                position: absolute;
+                left: 0;
+                top: 2px;
+                font-size: 16px;
+                transition: all 200ms linear;
+                color: $primary;
+                border: none;
+                outline: none;
+                background-color: transparent;
+            }
+        }
+
+        ul {
+            list-style: none;
+            margin-left: -15px;
+        }
+    }
+
+    &__lowerBox {
+        p {
+            text-align: center;
+            margin: 0;
+            font-size: 11.5px;
+            padding-top: 20.5px;
+            padding-bottom: 20.5px;
+            border-top: 1px solid rgba(143, 169, 214, 0.32);
+        }
+        a {
+            font-weight: 600;
+            transition: 0.5s;
+        }
+
+        &-a {
+            color: $primary;
+        }
+    }
+}

@@ -1,0 +1,345 @@
+// +++++++++++++++ Testimony +++++++++++++
+.testimony {
+    // margin-top: 100px;
+    padding: 100px 0px;
+    width: 100%;
+    background-color: $bg-section;
+    position: relative;
+
+    &__title {
+        text-align: center;
+
+        h1 {
+            font-size: 1em;
+            font-weight: 400;
+            font-family: $heading-font;
+            color: $color-title;
+            @include for-size(phone-only) {
+                font-size: 0.9em;
+            }
+        }
+
+        h2 {
+            color: $color-title;
+            font-size: 2em;
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-top: 15px;
+            @include for-size(phone-only) {
+                font-size: 1.4em;
+            }
+        }
+
+        p {
+            font-size: 0.9em;
+            line-height: 1.6;
+            margin-top: 15px;
+            @include for-size(phone-only) {
+                font-size: 0.8em;
+            }
+        }
+    }
+
+    &__row {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 30px;
+        @include for-size(phone-only) {
+                flex-direction: column;  
+        }
+    }
+
+    &__col-md-8 {
+        flex-basis: 50%;
+        box-shadow: $box-shadow;
+        min-height: 500px;
+        background-color: #fff;
+
+        @include for-size(phone-only) {
+                flex-basis: 100%;
+        }
+
+        &:not(:first-child) {
+            padding: 50px 40px;
+        }
+
+        &:not(:last-child) {
+            @include for-size(phone-only) {
+                display: none;
+            }
+        }
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        &-img {
+            &-image {
+                display: block;
+                width: 100%;
+                border-radius: 50%;
+            }
+        }
+        &-content {
+            margin-left: 20px;
+
+            h3 {
+                color: $color-title;
+                font-size: 1em;
+                font-weight: 900;
+                line-height: 1.1;
+                letter-spacing: -0.03em;
+                @include for-size(phone-only) {
+                    font-size: 0.9em;
+                }
+            }
+
+            span {
+                font-size: 12px;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-family: $heading-font;
+                letter-spacing: 0.2em;
+            }
+        }
+    }
+
+    &__text {
+        margin-top: 30px;
+
+        p {
+            font-size: 0.9em;
+            line-height: 1.6;
+            @include for-size(phone-only) {
+                font-size: 0.8em;
+            }
+        }
+    }
+
+    &__owner {
+        &-img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+        }
+    }
+
+    &__ctrl-prev,
+    &__ctrl-next {
+        position: absolute;
+        top: 50%;
+        background-color: $primary !important;
+        width: 40px;
+        height: 40px;
+        border-radius: 50% !important;
+        line-height: 0 !important;
+        text-align: center;
+
+        .material-symbols-outlined {
+            font-size: 34px !important;
+            color: #fff;
+        }
+    }
+
+    &__ctrl-prev {
+        left: 3%;
+    }
+
+    &__ctrl-next {
+        right: 3%;
+    }
+}
+
+// ++++++++ Swiper +++++++++++++
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.autoplay-progress {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: $primary;
+}
+
+.autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 4px;
+    stroke: $primary;
+    fill: none;
+    stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 40% !important;
+    z-index: 500 !important;
+    background-color: $primary !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 100% !important;
+    line-height: 0 !important;
+    text-align: center;
+
+    &::after {
+        font-size: 20px !important;
+        color: #fff;
+    }
+}
+
+.swiper-button-prev {
+    left: -1% !important;
+
+    &::after {
+        content: "";
+    }
+}
+
+.swiper-button-next {
+    right: -1% !important;
+}
+
+.swiper-pagination-bullet {
+    opacity: 1 !important;
+    margin: 0 8px !important;
+    background: rgba(0, 0, 0, 0.3) !important;
+    display: inline-block !important;
+    width: 6px !important;
+    height: 6px !important;
+    position: relative !important;
+    border-radius: 100% !important;
+    transition: all 300ms ease-out !important;
+
+    &::before {
+        content: "" !important;
+        position: absolute !important;
+        left: -7px !important;
+        top: -7px !important;
+        right: -7px !important;
+        bottom: -7px !important;
+        border-radius: 50% !important;
+        box-sizing: border-box !important;
+        border: 1px solid rgba(0, 0, 0, 0.2) !important;
+        transition: all 300ms ease-out !important;
+        transform: scale(0) !important;
+    }
+}
+
+.swiper-pagination-bullet-active {
+    background: $primary !important;
+
+    &::before {
+        transform: scale(1) !important;
+    }
+}
+
+// +++++++++++ Contact ++++++++++++++
+.contact {
+    background: $primary;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("https://www.textmercato.com/_next/static/media/cta-pattern-2.e39d7b5b.png");
+        background-position: 100%;
+    }
+    &__inner {
+        background: $primary;
+        padding: 60px 0px;
+        position: relative;
+        border-radius: 15px;
+        display: block;
+        color: #fff;
+    }
+
+    &__row {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include for-size(phone-only) {
+                flex-direction: column;
+                justify-content: center;    // needed for the "phone only" layout. (otherwise, it would be "justified")
+        }
+    }
+
+    &__col-1 {
+        flex-basis: 50%;
+
+        @include for-size(phone-only) {
+                flex-basis: 100%;
+        }
+
+        &:not(:first-child) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2 {
+            color: $color-title;
+            font-size: 2em;
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-top: 15px;
+
+            @include for-size(phone-only) {
+                font-size: 1.4em;
+                text-align: center;
+            }
+        }
+
+        p {
+            font-size: 0.9em;
+            line-height: 1.6;
+            margin-top: 20px;
+
+            @include for-size(phone-only) {
+                font-size: 0.8em;
+                text-align: center;
+            }
+        }
+        a {
+            background: $color-title;
+            padding: 1.3em 2.4em 1.3em 2.4em;
+            border-radius: 8px;
+            color: white;
+            font-size: 15px;
+            font-family: $heading-font;
+            transition: all 0.2s ease-in-out;
+            margin-top: 20px;
+            box-shadow: $box-shadow;
+
+            &:hover {
+                background-color: #fff;
+                color: $color-title;
+            }
+        }
+    }
+}

@@ -1,0 +1,322 @@
+.process {
+    width: 100%;
+    height: 100%;
+    background: $section-bg;
+    margin-top: 150px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    color: $color-title;
+
+    &__title {
+        text-align: center;
+
+        h1 {
+            font-size: 1em;
+            font-weight: 400;
+            font-family: $heading-font;
+
+            @include for-size(phone-only) {
+                font-size: 0.9em;
+            }
+        }
+
+        h2 {
+            font-size: 2em;
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-top: 15px;
+
+            @include for-size(phone-only) {
+                font-size: 1.4em;
+            }
+        }
+    }
+
+    &__row {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 50px;
+
+        @include for-size(phone-only) {
+                flex-direction: column;
+        }
+    }
+
+    &__col-5 {
+        flex-basis: 45%;
+        @include for-size(phone-only) {
+                flex-basis: 100%;
+        }
+        h2,
+        h3 {
+            font-size: 1em;
+            font-weight: 400;
+            font-family: $heading-font;
+            @include for-size(phone-only) {
+                font-size: 0.9em;
+            }
+        }
+
+        h1 {
+            font-size: 8em;
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin: 25px 0px;
+
+            @include for-size(phone-only) {
+                font-size: 6.4em;
+                text-align: center;
+            }
+        }
+
+        p {
+            font-size: 0.9em;
+            line-height: 1.6;
+            margin-top: 20px;
+
+            @include for-size(phone-only) {
+                font-size: 0.8em;
+            }
+        }
+
+        a {
+            background: $primary;
+            padding: 1em 1.2em;
+            border-radius: 8px;
+            color: white ;
+            font-size: 15px;
+            font-family: $heading-font;
+            transition: all 0.2s ease-in-out;
+            margin-top: 20px;
+            box-shadow: $box-shadow;
+
+            &:hover {
+                background-color: #fff;
+                color: $color-title;
+            }
+        }
+    }
+
+    &__ghtp {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 30px 0px;
+    }
+
+    &__bar {
+        height: 250px;
+        width: 60px;
+        background-color: rgba(0, 0, 0, 0.1);
+        top: 100%;
+        position: relative;
+        overflow: hidden;
+        border-radius: $border-radius;
+         &:not(:first-child) {
+            margin-left: 21px;
+         }
+
+         @include for-size(phone-only) {
+                width: 40px;
+                height: 200px;
+         }
+    }
+}
+
+// +++++++++++++ Worker ++++++++++++++++++++
+.worker {
+    width: 100%;
+    height: 100%;
+    background: $bg-section;
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    &__title {
+        text-align: center;
+
+        h1 {
+            font-size: 1em;
+            font-weight: 400;
+            font-family: $heading-font;
+
+            @include for-size(phone-only) {
+                font-size: 0.9em;
+            }
+        }
+
+        h2 {
+            font-size: 2em;
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-top: 15px;
+
+            @include for-size(phone-only) {
+                font-size: 1.4em;
+            }
+        }
+    }
+
+    &__row {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 40px;
+
+        @include for-size(phone-only) {
+                flex-direction: column;
+        }
+    }
+
+    &__col-1 {
+        flex-basis: 22%;
+        height: 100%;
+        background-color: #fff;
+        position: relative;
+
+        @include for-size(phone-only) {
+                flex-basis: 100%;	
+        }
+
+        &:not(:first-child) {
+            margin-left: 20px;
+
+            @include for-size(phone-only) {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &__img {
+         &-img {
+            width: 100%;
+        border-radius: $border-radius;
+        object-fit: cover;
+        vertical-align: middle;
+        @include for-size(phone-only) {
+                height: 60vh;
+        }
+         }
+    }
+
+    &__content {
+        margin-top: 20px;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        background-color: #fff;
+        width: 100%;
+        padding: 10px;
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+
+        h2 {
+            font-size: 1em;
+            font-weight: 600;
+            font-family: $heading-font;
+            margin-bottom: 5px;
+
+            @include for-size(phone-only) {
+                font-size: 0.9em;
+            }
+        }
+
+        p {
+            font-size: 0.8em;
+            line-height: 1.6;
+            @include for-size(phone-only) {
+                text-align: center !important;
+            }
+        }
+    }
+
+    &__social {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+
+        a {
+            margin: 0px 10px;
+        }
+    }
+}
+
+// +++++++++++++ Partner ++++++++++++++
+.partner {
+    width: 100%;
+    height: 100%;
+    background: $section-bg;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    color: $color-title;
+
+    &__title {
+        text-align: center;
+        h2 {
+            font-size: 2em;
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-top: 15px;
+            @include for-size(phone-only) {
+                font-size: 1.4em;
+            }
+        }
+    }
+
+    &__row {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 70px;
+        @include for-size(phone-only) {
+                margin-top: 20px;
+        }
+    }
+
+    &__col-1 {
+        flex-basis: 45%;
+        @include for-size(phone-only) {
+                flex-basis: 100%;
+        }
+        h1 {
+            font-size: 7em;
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin: 25px 0px;
+
+            @include for-size(phone-only) {
+                font-size: 5.4em;
+            }
+        }
+    }
+
+    &__flex {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        @include for-size(phone-only) {
+                width: 100%;
+        }
+    }
+
+    &__logo {
+        margin: 10px;
+        border-radius: 50%;
+    }
+
+}
