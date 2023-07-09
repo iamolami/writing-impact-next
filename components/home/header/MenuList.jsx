@@ -1,19 +1,17 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const MenuLists = ({ item, onToggle, active, setNavbarOpen }) => {
   return (
     <div className="menu__menuDropBox">
       <li className="menu__menuList">
-        <NavLink
+        <a
           className="menu__menuLink"
-          to={item.link}
+          href={item.link}
           onClick={() => setNavbarOpen(false)}
         >
           {item.text}
-        </NavLink>
+        </a>
         <div>
           <FontAwesomeIcon icon={item.arrow} onClick={onToggle} />
         </div>

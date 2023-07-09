@@ -1,31 +1,27 @@
 "use client";
-
 import React from "react";
-import "../styles/app.css";
-import { BrowserRouter, Route } from "react-router-dom";
-import pathway from "@/data/pathway";
-import CustomRoutes from "@/routes";
+import Features from "@/components/home/features";
+import DisplayFooter from "@/components/home/footer";
+import HeaderSection from "@/components/home/header";
+import Process from "@/components/home/process";
+import Services from "@/components/home/services";
+import Testimonials from "@/components/home/testimonials";
+import Workers from "@/components/home/workers";
+import Partner from "@/components/home/workers/Partner";
 
 const page = () => {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
-    <BrowserRouter>
-      <CustomRoutes>
-        {pathway.map(({ path, Component }, key) => (
-          <Route
-            exact
-            path={path}
-            key={key}
-            element={
-              <Component
-                navbarOpen={navbarOpen}
-                setNavbarOpen={setNavbarOpen}
-              />
-            }
-          />
-        ))}
-      </CustomRoutes>
-    </BrowserRouter>
+    <main>
+      <HeaderSection navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} />
+      <Services />
+      <Features />
+      <Process />
+      <Workers />
+      <Partner />
+      <Testimonials />
+      <DisplayFooter />
+    </main>
   );
 };
 
